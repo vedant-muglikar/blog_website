@@ -56,14 +56,21 @@ app.post("/", (req, res) => {
   console.log(blogs);
 
   res.render("index.ejs", { blogs });
+
+  /*Rechecking for the blog */
+  blogs.forEach((blog, index) => {
+    app.get(`/${blog.id}`, (req, res) => {
+      console.log(blog.id);
+      console.log(blog);
+      res.render("blog-con.ejs", { blog });
+    });
+  });
 });
 
 /*adding content to blogs */
 
 blogs.forEach((blog, index) => {
   app.get(`/${blog.id}`, (req, res) => {
-    console.log(blog.id);
-    console.log(blog);
     res.render("blog-con.ejs", { blog });
   });
 });
