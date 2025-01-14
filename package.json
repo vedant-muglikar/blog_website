@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "A website to upload your blogs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
 }

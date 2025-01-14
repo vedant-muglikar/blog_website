@@ -1,0 +1,9 @@
+<%- include("Partials/header.ejs") %>
+
+<section class="main">
+  <ol>
+    <% blogs.forEach(blog => {%> <% let title = blog.title %>
+    <li><a href="/<%= blog.id %>"><%=title%></a></li>
+    <%}); %>
+  </ol>
+</section>
