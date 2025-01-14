@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+* {
+  --bg-for-hf: rgb(100, 182, 210);
+}
+
 header {
-  background: rgb(100, 182, 210);
+  background: var(--bg-for-hf);
 }
 
 .nav {
@@ -18,11 +22,13 @@ header {
   font-size: 1.2rem;
 }
 
-.links {
+.links,
+.socials {
   width: 50%;
 }
 
-.links ul {
+.links ul,
+.socials ul {
   display: flex;
   justify-content: space-evenly;
   text-decoration: none;
@@ -33,4 +39,25 @@ header {
 .main {
   display: flex;
   justify-content: center;
+}
+
+.footer {
+  min-height: 10vh;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--bg-for-hf);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer div {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+i {
+  font-size: 1.5rem;
 }
