@@ -61,3 +61,15 @@ header {
 i {
   font-size: 1.5rem;
 }
+
+.blog-head {
+  display: flex;
+}
+
+.blog-head button {
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+.blog-head i {
+  font-size: 1.2rem;
+}

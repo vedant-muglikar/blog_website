@@ -29,8 +29,8 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { blogs });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about.ejs");
+app.get("/del", (req, res) => {
+  res.render("del.ejs");
 });
 
 app.get("/addBlog", (req, res) => {
@@ -56,8 +56,6 @@ app.post("/", (req, res) => {
   /*Rechecking for the blog */
   blogs.forEach((blog, index) => {
     app.get(`/${blog.id}`, (req, res) => {
-      console.log(blog.id);
-      console.log(blog);
       res.render("blog-con.ejs", { blog });
     });
   });
@@ -73,4 +71,12 @@ blogs.forEach((blog, index) => {
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
+});
+
+/*Deletion of a blog */
+app.post("/deleted", (req, res) => {
+  let idBlog = req.body.id;
+
+  blogs.splice(idBlog - 1, 1);
+  res.render("deleted.ejs");
 });
