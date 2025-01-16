@@ -40,16 +40,12 @@ app.get("/addBlog", (req, res) => {
 /*post method */
 
 app.post("/", (req, res) => {
-  console.log(req.body);
-
   /*Adding blog to list */
   let title = req.body["title"];
   let content = req.body["content"];
   let index = blogs.length + 1;
-  console.log(index);
 
   blogs.push({ id: index, title: title, content: content });
-  console.log(blogs);
 
   res.render("index.ejs", { blogs });
 
@@ -80,3 +76,26 @@ app.post("/deleted", (req, res) => {
   blogs.splice(idBlog - 1, 1);
   res.render("deleted.ejs");
 });
+
+/*Editing of blog */
+
+app.get("/edit", (req, res) => {
+  res.render("edit.ejs");
+});
+
+app.post("/edited", (req, res) => {
+  console.log(req.body);
+  blogs.forEach((blog) => {
+    if (blog.id == req.body.id) {
+      blog.title = req.body.title;
+      blog.content = req.body.content;
+    }
+  });
+  res.render("edited.ejs");
+});
+
+// app.post("/edited", (req, res) => {
+//   let blogNo = req.body.id;
+//   console.log(blogNo);
+//   res.render("edited.ejs", { blogNo, blogs });
+// });

@@ -1,0 +1,15 @@
+<%- include("Partials/header.ejs") %>
+
+<form action="/edited" method="POST">
+  <label for="id">Blog no.</label>
+  <input type="number" name="id" />
+
+  <label for="title">Title</label>
+  <input name="title" type="text" />
+  <label for="content">Content</label>
+  <textarea name="content" id=""></textarea>
+
+  <button>Submit</button>
+</form>
+
+<%- include("Partials/footer.ejs") %>
