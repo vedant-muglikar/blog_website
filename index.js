@@ -13,7 +13,7 @@ let blogs = [
   },
   {
     id: 2,
-    title: "second Blog",
+    title: "Second Blog",
     content: "The quick brown fox jumps over the lazy dog",
   },
 ];

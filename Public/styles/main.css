@@ -5,16 +5,36 @@
 }
 
 * {
-  --bg-for-hf: rgb(100, 182, 210);
+  --mild-blue: #3787ce;
+  --strong-blue: #000957;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
-  background: var(--bg-for-hf);
+  background: var(--mild-blue);
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  color: var(--strong-blue);
+  font-family: "PT Serif", serif;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.cr {
+  color: var(--strong-blue);
+  font-family: "PT Serif", serif;
+  font-style: normal;
+  font-size: 1.3rem;
 }
 
 .nav {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  width: 80%;
   min-height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -34,6 +54,16 @@ header {
   text-decoration: none;
   list-style: none;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.links ul li a,
+.socials ul li a {
+  color: var(--strong-blue);
+  font-family: "PT Serif", serif;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 1.3rem;
 }
 
 .main {
@@ -48,14 +78,17 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
-  background: var(--bg-for-hf);
-  justify-content: space-between;
+  background: var(--mild-blue);
+  justify-content: center;
   align-items: center;
 }
 
-.footer div {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.footer .content {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 i {
@@ -72,4 +105,9 @@ i {
 }
 .blog-head i {
   font-size: 1.2rem;
+}
+
+.main {
+  font-size: 1.22rem;
+  font-family: "Poppins", serif;
 }
