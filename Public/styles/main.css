@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", serif;
 }
 
 * {
@@ -66,11 +67,6 @@ header {
   font-size: 1.3rem;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-}
-
 .footer {
   min-height: 10vh;
   display: flex;
@@ -109,5 +105,15 @@ i {
 
 .main {
   font-size: 1.22rem;
-  font-family: "Poppins", serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  margin-top: 1.3rem;
 }
