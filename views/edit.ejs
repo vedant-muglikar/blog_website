@@ -1,15 +1,19 @@
 <%- include("Partials/header.ejs") %>
 
-<form action="/edited" method="POST">
-  <label for="id">Blog no.</label>
-  <input type="number" name="id" />
+<section class="main">
+  <div class="container">
+    <form action="/edited" method="POST">
+      <label for="id">Blog no.</label>
+      <input type="number" name="id" />
 
-  <label for="title">Title</label>
-  <input name="title" type="text" />
-  <label for="content">Content</label>
-  <textarea name="content" id=""></textarea>
+      <label for="title">Title</label>
+      <input name="title" type="text" />
+      <label for="content">Content</label>
+      <textarea name="content" rows="13" cols="13"></textarea>
 
-  <button>Submit</button>
-</form>
+      <button>Submit</button>
+    </form>
+  </div>
+</section>
 
 <%- include("Partials/footer.ejs") %>

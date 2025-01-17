@@ -84,7 +84,6 @@ app.get("/edit", (req, res) => {
 });
 
 app.post("/edited", (req, res) => {
-  console.log(req.body);
   blogs.forEach((blog) => {
     if (blog.id == req.body.id) {
       blog.title = req.body.title;

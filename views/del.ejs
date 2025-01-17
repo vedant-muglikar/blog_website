@@ -1,9 +1,13 @@
 <%- include("Partials/header.ejs") %>
 
-<form action="/deleted" method="POST">
-  <label for="id">Blog No.</label>
-  <input type="number" name="id" />
-  <button>Delete Blog</button>
-</form>
+<section class="main">
+  <div class="container">
+    <form action="/deleted" method="POST">
+      <label for="id">Blog No.</label>
+      <input type="number" name="id" />
+      <button>Delete Blog</button>
+    </form>
+  </div>
+</section>
 
 <%- include("Partials/footer.ejs") %>
